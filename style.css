@@ -1,0 +1,142 @@
+/* Configurações globais */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background-color: #0d0d0d;
+    color: #f0f0f0;
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 2rem;
+  }
+  
+  /* Seção Hero */
+  .hero {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: linear-gradient(120deg, #0f0f0f, #1a1a1a);
+    border-bottom: 3px solid #00ff88;
+  }
+  
+  .hero-img {
+    width: 100%;
+    max-width: 900px;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    color: #00ff88;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+  }
+  
+  /* Botão Neon */
+  .cta-button {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 1rem 2rem;
+    border: 2px solid #00ff88;
+    color: #00ff88;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #00ff88;
+  }
+  
+  .cta-button:hover {
+    background-color: #00ff88;
+    color: #000;
+    box-shadow: 0 0 20px #00ff88, 0 0 40px #00ff88;
+  }
+  
+  /* Seções com texto e imagem lado a lado */
+  .about .flex,
+  .bonus .flex {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+  }
+  
+  .about-img {
+    width: 300px;
+    border-radius: 10px;
+  }
+  
+  /* Lista de módulos */
+  .course ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .course ul li {
+    margin-bottom: 0.8rem;
+    border-left: 3px solid #00ff88;
+    padding-left: 1rem;
+  }
+  
+  /* Bônus */
+  .bonus-item {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .bonus-item img {
+    width: 100px;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Rodapé */
+  footer {
+    text-align: center;
+    background: #111;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+    color: #aaa;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .about .flex,
+    .bonus .flex {
+      flex-direction: column;
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+    }
+    .hero {
+        background-image: url('https://via.placeholder.com/1600x900?text=Curso+de+Canto');
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed; /* <- efeito parallax aqui */
+        text-align: center;
+        padding: 6rem 1rem;
+        border-bottom: 3px solid #00ff88;
+        color: #fff;
+        position: relative;
+      }
+      
+      .hero::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6); /* escurece para facilitar a leitura */
+        z-index: 1;
+      }
+      
+      .hero .container {
+        position: relative;
+        z-index: 2;
+      }
+      
+  }
+  
